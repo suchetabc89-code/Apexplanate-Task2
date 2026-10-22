@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Web Project</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION - FLEXBOX
+    ========================== -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Sucheta Website
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#todo">To-Do</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT - CSS GRID
+    ========================== -->
+
+    <main class="container">
+
+        <!-- HOME -->
+        <section id="home" class="home-section">
+
+            <h1>ABOUT ME </h1>
+
+            <p> Detail-oriented Electronics and Communication Engineering undergraduate (CGPA: 7.98) with hands-on experience in analog and digital circuit, and web development. Skilled in C programming. Comfortable taking a hardware or software idea from concept through a working prototype.            </p>
+
+            <!-- Feature Cards - CSS GRID -->
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <h3>Hardware & Embedded Skills</h3>
+                    <p>
+                       Analog and Digital Circuit Design, Soldering.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Programming Skills</h3>
+                    <p> C Programming and Web Development Technologies (HTML, CSS, JavaScript (Basics)).                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Currently Exploring</h3>
+                    <p>
+                       Python, DSA, MATLAB.
+                </div>
+                        <!-- Link Section -->
+        <section>
+            <p>
+                This is my linkedin account
+                <a href="https://www.linkedin.com/in/sucheta-mukhopadhyay-33b553420"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    linkedin
+                </a>
+                 <h2>My Image</h2>
+            </p>
+        </section>
+
+         <section>
+           
+
+            <img
+                src="sucheta.jpeg"
+                alt="Computer and programming"
+                class="main-image">
+        </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT FORM
+        ========================== -->
+
+        <section id="contact" class="contact-section">
+
+            <h2>Contact Form</h2>
+
+            <form id="contactForm">
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+                    <small id="nameError"></small>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <small id="emailError"></small>
+
+                </div>
+
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Enter your message"
+                    ></textarea>
+
+                    <small id="messageError"></small>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button type="submit">
+                    Submit
+                </button>
+
+                <p id="successMessage"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             RESPONSIVE IMAGE GALLERY
+        ========================== -->
+
+        <section id="gallery" class="gallery-section">
+
+            <h2>Project Image Gallery</h2>
+
+            <p class="section-description">
+                The images below use CSS Grid and automatically
+                rearrange themselves according to the screen size.
+            </p>
+
+
+            <div class="image-grid">
+
+                <!-- Image 1 -->
+
+                <div class="image-card">
+
+                    <img src="fwe.jpeg" alt="fwe">
+
+                    <h3>Full Wave Rectifier with Capacitive Filter to achieve 10% Duty Cycle</h3>
+
+                </div>
+
+
+                <!-- Image 2 -->
+
+                <div class="image-card">
+
+                    <img
+                        src="line detector.jpeg"
+                        alt="Line detector"
+                    >
+
+                    <h3>Line Detector without Microcontroller</h3>
+
+
+                </div>
+
+
+                <!-- Image 3 -->
+
+                <div class="image-card">
+
+                    <img
+                        src="counter_ic.jpeg"
+                        alt="Counter IC"
+                    >
+
+                    <h3>LED Chaser driven by an NE555 Timer Clock</h3>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DYNAMIC TO-DO LIST
+        ========================== -->
+
+        <section id="todo" class="todo-section">
+
+            <h2>Dynamic To-Do List</h2>
+
+            <p class="section-description">
+                Add, complete and remove tasks using JavaScript.
+            </p>
+
+
+            <div class="todo-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task"
+                >
+
+                <button id="addTask">
+                    Add Task
+                </button>
+
+            </div>
+
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Sucheta Website | HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="task2.js"></script>
+
+</body>
+
+</html>
+

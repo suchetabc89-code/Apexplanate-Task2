@@ -1,0 +1,656 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+  
+body {
+    font-family: Arial, sans-serif;
+    background: #e0d7e7;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVIGATION
+   FLEXBOX IS USED HERE
+========================================= */
+
+header {
+    background: #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 15px 25px;
+
+    /* FLEXBOX */
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    /* FLEXBOX */
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   CSS GRID IS USED HERE
+========================================= */
+
+.container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+
+    /* CSS GRID */
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   HOME SECTION
+========================================= */
+
+.home-section {
+    background: rgb(187, 230, 236);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    grid-column: 1 / -1;
+}
+
+
+.home-section h1 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   FEATURE CARDS
+   CSS GRID
+========================================= */
+
+.feature-grid {
+
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.feature-card {
+
+    background: #af9dd1;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #dce8f7;
+}
+
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-section {
+
+    background: rgb(185, 229, 169);
+    padding: 30px;
+    border-radius: 12px;
+
+    /* Make the whole div occupy the center */
+    grid-column: 1 / -1;
+
+    width: 60%;
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #007bff;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+}
+
+
+/* Error messages */
+
+small {
+
+    display: block;
+
+    color: red;
+
+    margin-top: 5px;
+
+    min-height: 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+
+    border: none;
+
+    background: #5e6839;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+button:hover {
+
+    background: #2a764f;
+}
+
+
+#successMessage {
+
+    color: green;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   IMAGE GALLERY
+   CSS GRID
+========================================= */
+
+.gallery-section {
+
+    background: rgb(241, 236, 187);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    grid-column: 1 / -1;
+}
+
+
+.gallery-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+.section-description {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #555;
+}
+
+
+/* CSS GRID */
+
+.image-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.image-card {
+
+    background: #cdcccc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+.image-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.image-card h3 {
+
+    padding-top: 15px;
+}
+
+
+.image-card p {
+
+    padding: 5px 15px 15px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   TO-DO LIST
+========================================= */
+
+.todo-section {
+
+    background: rgb(219, 167, 170);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    grid-column: 1 / -1;
+}
+
+
+.todo-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+.todo-input {
+
+    /* FLEXBOX */
+
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+#taskInput {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+
+#taskList {
+
+    list-style: none;
+
+    max-width: 700px;
+
+    margin: 25px auto 0;
+}
+
+
+#taskList li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #f1f1f1;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 6px;
+}
+
+
+.task-text {
+
+    cursor: pointer;
+
+    flex: 1;
+}
+
+
+.completed {
+
+    text-decoration: line-through;
+
+    color: gray;
+}
+
+
+.delete-btn {
+
+    background: #dc3545;
+
+    padding: 7px 12px;
+
+    font-size: 14px;
+}
+
+
+.delete-btn:hover {
+
+    background: #a71d2a;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    /*
+       Main Grid changes from
+       2 columns to 1 column
+    */
+
+    .container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Feature cards become 2 columns
+    */
+
+    .feature-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /*
+       Image gallery becomes 2 columns
+    */
+
+    .image-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    /*
+       Navigation becomes vertical
+    */
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+
+    /*
+       Main container
+    */
+
+    .container {
+
+        padding: 20px 12px;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Feature cards become
+       single column
+    */
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Image gallery becomes
+       single column
+    */
+
+    .image-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Heading becomes smaller
+    */
+
+    .home-section h1 {
+
+        font-size: 28px;
+    }
+
+
+    /*
+       Sections become smaller
+    */
+
+    .home-section,
+    .contact-section,
+    .gallery-section,
+    .todo-section {
+
+        padding: 20px;
+    }
+
+
+    /*
+       To-Do input becomes vertical
+    */
+
+    .todo-input {
+
+        flex-direction: column;
+    }
+
+
+    #taskInput {
+
+        width: 100%;
+    }
+
+
+    .todo-input button {
+
+        width: 100%;
+    }
+
+
+    /*
+       Image height for mobile
+    */
+
+    .image-card img {
+
+        height: 220px;
+    }
+
+}
+
+/* Image */
+.main-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+}
